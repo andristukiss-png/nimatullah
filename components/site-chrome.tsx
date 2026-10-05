@@ -38,6 +38,8 @@ export function SiteFooter({ locale }: { locale: Locale }) {
         <Link href={`/${locale}/about`}>{t.nav.about}</Link>
         <Link href={`/${locale}/principles`}>{t.nav.principles}</Link>
         <Link href={`/${locale}/verification`}>{t.nav.verification}</Link>
+        <Link href={`/${locale}/transparency`}>{locale === "ar" ? "الشفافية" : "Transparency"}</Link>
+        <Link href={`/${locale}/privacy`}>{locale === "ar" ? "الخصوصية" : "Privacy"}</Link>
         <Link href={`/${locale}/institutional`}>{t.nav.institutional}</Link>
         <a href="mailto:info@nimatullah.com">info@nimatullah.com</a>
       </div>
