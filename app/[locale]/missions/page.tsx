@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale, missions } from "@/lib/site";
 import { PageShell } from "@/components/site-chrome";
@@ -31,6 +32,9 @@ export default async function MissionsPage({ params }: { params: Promise<{ local
                   <span>{ar ? "قدّم مهارتك" : "Offer a skill"}</span>
                   <span>{ar ? "شارك" : "Share"}</span>
                 </div>
+                <Link className="textLink" href={"/" + locale + "/missions/" + mission.slug}>
+                  {ar ? "عرض نموذج المبادرة" : "View mission prototype"} →
+                </Link>
               </div>
             </article>
           ))}
