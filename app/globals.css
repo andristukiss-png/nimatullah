@@ -340,3 +340,92 @@ footer { background: #04100b; color: #dfe5e1; padding: 58px clamp(24px,7vw,110px
   .impactIdPanel { margin-left:24px; margin-right:24px; padding:30px; }
   .storyPlaceholder { margin-left:24px; margin-right:24px; padding:32px; }
 }
+
+
+/* Mission detail + disclosure pages */
+.missionDetailHero {
+  padding: 110px clamp(24px, 7vw, 110px);
+  background: var(--ink);
+  color: var(--ivory);
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 80px;
+  min-height: 620px;
+  align-items: end;
+}
+.missionDetailHero h1 {
+  margin: 0;
+  font-size: clamp(52px, 7vw, 104px);
+  line-height: .98;
+  font-weight: 450;
+  letter-spacing: -.05em;
+}
+[dir="rtl"] .missionDetailHero h1 { letter-spacing: 0; line-height: 1.2; }
+.missionDetailHero > div:first-child > p:last-child { max-width:760px; color:#b7c1bb; font-size:19px; line-height:1.75; }
+.prototypeBadge { border:1px solid rgba(255,255,255,.18); padding:30px; align-self:end; }
+.prototypeBadge strong { font-size:11px; letter-spacing:.18em; color:var(--gold); }
+.prototypeBadge p { color:#aeb9b2; line-height:1.65; font-size:14px; margin:18px 0 0; }
+
+.participationSection {
+  padding: 100px clamp(24px, 7vw, 110px);
+  display:grid;
+  grid-template-columns:.7fr 1.3fr;
+  gap:80px;
+}
+.participationSection h2 { font-size:clamp(38px,4.8vw,70px); font-weight:450; line-height:1.05; margin:18px 0; letter-spacing:-.04em; }
+[dir="rtl"] .participationSection h2 { letter-spacing:0; line-height:1.25; }
+.participationGrid { display:grid; grid-template-columns:repeat(2,1fr); }
+.participationGrid article { min-height:220px; padding:30px; border:1px solid #dcd6cb; margin:-1px 0 0 -1px; }
+.participationGrid article > span { color:var(--gold); font-size:10px; }
+.participationGrid h3 { font-size:23px; font-weight:450; margin:44px 0 12px; }
+.participationGrid p { color:#5b685f; line-height:1.7; font-size:14px; }
+
+.methodPanel {
+  margin: 0 clamp(24px, 7vw, 110px) 90px;
+  padding: 50px;
+  background:#f0ece4;
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:70px;
+  align-items:end;
+}
+.methodPanel h2 { font-size:clamp(36px,4vw,58px); font-weight:450; margin:0; letter-spacing:-.04em; }
+[dir="rtl"] .methodPanel h2 { letter-spacing:0; }
+.methodPanel > p { color:#56635b; line-height:1.8; font-size:17px; margin:0; }
+.backLinkWrap { padding: 0 clamp(24px, 7vw, 110px) 100px; }
+
+.transparencyTable { padding: 80px clamp(24px, 7vw, 110px); }
+.transparencyTable > div {
+  display:grid;
+  grid-template-columns:.55fr 1.45fr;
+  gap:60px;
+  padding:27px 0;
+  border-bottom:1px solid #d9d4ca;
+}
+.transparencyTable strong { font-size:14px; font-weight:500; }
+.transparencyTable p { margin:0; color:#5c6961; line-height:1.65; }
+.transparencyStatement {
+  margin: 0 clamp(24px, 7vw, 110px) 110px;
+  padding:60px;
+  background:var(--ink-soft);
+  color:var(--ivory);
+}
+.transparencyStatement h2 { font-size:clamp(38px,4vw,62px); font-weight:450; max-width:900px; letter-spacing:-.04em; }
+[dir="rtl"] .transparencyStatement h2 { letter-spacing:0; }
+.transparencyStatement > p:last-child { max-width:800px; color:#b1bbb5; line-height:1.75; font-size:17px; }
+
+.privacyBody { padding: 80px clamp(24px, 7vw, 110px) 120px; }
+.privacyBody article { display:grid; grid-template-columns:100px 1fr; gap:30px; padding:36px 0; border-bottom:1px solid #d8d2c8; }
+.privacyBody article > span { color:var(--gold); font-size:11px; }
+.privacyBody h2 { margin:0 0 12px; font-size:32px; font-weight:450; }
+.privacyBody p { margin:0; max-width:780px; color:#59665e; line-height:1.75; }
+
+@media (max-width: 900px) {
+  .missionDetailHero, .participationSection, .methodPanel { grid-template-columns:1fr; gap:34px; }
+  .missionDetailHero { min-height:560px; padding:90px 24px 70px; }
+  .participationGrid { grid-template-columns:1fr; }
+  .methodPanel { margin-left:24px; margin-right:24px; padding:30px; }
+  .transparencyTable > div { grid-template-columns:1fr; gap:8px; }
+  .transparencyStatement { margin-left:24px; margin-right:24px; padding:32px; }
+  .privacyBody article { grid-template-columns:55px 1fr; }
+}
